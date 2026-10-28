@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b252b">
+  <meta name="description" content="Отель «Бриз» — ваше место у моря. Уютные номера, бассейн, ресторан и SPA. Выберите даты своего отдыха.">
+  <title>Бриз — ближе к морю, ближе к себе</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,800;1,900&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#102d34;--deep:#0b252b;--aqua:#8de0d0;--accent:#b4f1df;--paper:#f7f8f3;--sand:#ece8dd;--muted:#586b6e;--line:#dce2dc;--radius:14px;--font:'Montserrat',sans-serif;--ease:cubic-bezier(.16,1,.3,1)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:100px}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);font-size:14px;line-height:1.65}body.locked{overflow:hidden}button,input,select,textarea{font:inherit}button,a,input,select,textarea{-webkit-tap-highlight-color:transparent}button,a{touch-action:manipulation}a{color:inherit;text-decoration:none}button{cursor:pointer}img{display:block;max-width:100%;object-fit:cover}button{color:inherit}::selection{background:var(--aqua);color:var(--deep)}:focus-visible{outline:3px solid #188777;outline-offset:5px}input,textarea{caret-color:#137564}::-webkit-scrollbar{width:9px}::-webkit-scrollbar-track{background:var(--paper)}::-webkit-scrollbar-thumb{background:#6b9290;border-radius:8px}.wrap{width:min(1320px,calc(100% - 96px));margin-inline:auto}.section{padding-block:100px}h1,h2,h3,p{margin:0}h2{font-size:clamp(32px,4vw,54px);line-height:1.12;letter-spacing:-.035em;font-weight:800}h3{line-height:1.3;letter-spacing:-.025em}p{max-width:70ch}.serif{font-family:'Playfair Display',serif;font-style:italic;font-weight:500}.icon{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}.btn{min-height:52px;padding:15px 25px;border:0;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;gap:22px;font-weight:700;font-size:13px;background:var(--accent);color:var(--deep);transition:background .25s,transform .25s}.btn:hover{background:#91dfc8;transform:translateY(-2px)}.btn .icon{width:19px;height:19px}.btn-dark{background:var(--deep);color:white}.btn-dark:hover{background:#204750}.text-link{display:inline-flex;align-items:center;gap:14px;border-bottom:1px solid currentColor;padding-bottom:5px;font-weight:600;font-size:13px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:32px;margin-bottom:38px}.section-head p{max-width:345px;color:var(--muted);font-size:13px}.site-header{height:94px;position:fixed;top:0;inset-inline:0;z-index:20;color:white;border-bottom:1px solid #ffffff25;transition:background .25s}.site-header.scrolled{height:76px;background:var(--deep);box-shadow:0 5px 24px #06252b15}.header-inner{height:100%;display:flex;align-items:center;justify-content:space-between;gap:25px}.brand{display:flex;gap:12px;align-items:center;flex-shrink:0}.brand-wave{width:43px;height:43px;color:var(--aqua)}.brand-name{font-size:29px;line-height:1;font-weight:900;font-style:italic;letter-spacing:-.04em}.brand-small{font-size:11px;font-weight:500;letter-spacing:.24em;display:block;margin-top:7px;font-style:normal}.nav{display:flex;align-items:center;gap:28px}.nav a{font-size:12px;font-weight:500;color:#edf6f3;transition:color .2s}.nav a:hover{color:var(--aqua)}.header-cta{font-size:11px;min-height:45px;padding:12px 20px}.menu-toggle{display:none;background:none;border:1px solid #ffffff55;padding:10px;border-radius:6px;color:white}
+    .hero{min-height:860px;min-height:min(1000px,100svh);position:relative;color:white;display:flex;flex-direction:column;justify-content:end;isolation:isolate;background:var(--deep)}.hero-image{position:absolute;inset:0;width:100%;height:100%;z-index:-3;object-position:center 54%}.hero:before{content:'';position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,#061e29b8 0%,#07292d3d 70%),linear-gradient(0deg,#071f29f2 0%,transparent 65%,#071a25a6 100%)}.hero-content{padding-top:155px;padding-bottom:45px}.hero-topline{display:flex;align-items:center;gap:12px;font-size:11px;letter-spacing:.17em;text-transform:uppercase;margin-bottom:24px}.hero-topline:before{content:'';width:30px;height:1px;background:var(--aqua)}.hero-title{font-size:clamp(100px,18vw,265px);line-height:.85;letter-spacing:-.04em;font-weight:900;font-style:italic;margin-left:-.065em;animation:arrive 1.2s var(--ease) both}.hero-title span{display:block;font-style:normal;font-size:clamp(22px,3.2vw,45px);line-height:1.2;letter-spacing:-.025em;font-weight:500;margin:28px 0 0 .26em}.hero-lower{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-top:34px}.hero-copy{font-size:13px;color:#e5efed;max-width:370px}.hero-stamp{display:flex;gap:12px;align-items:center;color:var(--accent);font-size:11px;line-height:1.5}.hero-stamp .icon{width:35px;height:35px}.booking-bar{display:grid;grid-template-columns:1fr 1fr 1fr 1.1fr;gap:0;background:var(--paper);border-radius:var(--radius);color:var(--ink);margin-top:35px;padding:10px;box-shadow:0 15px 40px #001b2426}.booking-field{display:flex;flex-direction:column;justify-content:center;padding:7px 25px;border-right:1px solid var(--line);min-width:0}.booking-field label{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);font-weight:600;margin-bottom:5px}.booking-field input,.booking-field select{border:0;background:transparent;width:100%;min-height:30px;outline-offset:1px;color:var(--ink);font-weight:600;font-size:13px;color-scheme:light}.booking-bar .btn{margin-left:10px}.hero-perks{display:flex;gap:33px;padding-top:25px;font-size:11px;color:#e5efed}.hero-perks span{display:flex;gap:9px;align-items:center}.hero-perks .icon{width:18px;height:18px;color:var(--aqua)}.hero-bottom{border-top:1px solid #ffffff25;padding-block:15px;display:flex;justify-content:space-between;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#d3e2e0}.hero-bottom a{display:flex;gap:15px;align-items:center}.hero-bottom .icon{width:15px;height:15px}
+    .intro{padding-block:63px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;border-bottom:1px solid var(--line)}.intro h2{font-size:clamp(26px,3.3vw,43px)}.intro p{color:var(--muted);font-size:13px}.rooms-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.room{background:white;border-radius:var(--radius);overflow:hidden;box-shadow:0 10px 30px #10343a07;display:flex;flex-direction:column}.room-photo{position:relative;height:245px;overflow:hidden}.room-photo img{width:100%;height:100%;transition:transform .7s var(--ease)}.room:hover .room-photo img{transform:scale(1.045)}.room-tag{position:absolute;left:16px;bottom:16px;background:var(--paper);padding:6px 12px;border-radius:4px;font-size:11px;font-weight:600}.room-body{padding:25px;display:flex;flex-direction:column;flex:1}.room h3{font-size:21px;margin-bottom:12px}.room-features{list-style:none;padding:0;margin:0 0 22px;display:flex;flex-wrap:wrap;gap:7px 15px;font-size:11px;color:var(--muted)}.room-features li{display:flex;align-items:center;gap:5px}.room-features .icon{width:15px;height:15px}.room-bottom{border-top:1px solid var(--line);padding-top:20px;margin-top:auto;display:flex;justify-content:space-between;gap:12px;align-items:center}.price{font-size:22px;font-weight:700;letter-spacing:-.03em}.price small{display:block;font-size:11px;letter-spacing:0;font-weight:400;color:var(--muted)}.room-button{min-height:44px;padding:12px 17px;font-size:11px;gap:14px}.demo-note{font-size:11px;color:var(--muted);margin-top:20px}
+    .amenities{background:var(--deep);color:white;overflow:hidden}.amenities-layout{display:grid;grid-template-columns:1.05fr 1fr;gap:75px;align-items:center}.amenity-photo{position:relative;height:570px}.amenity-photo>img{height:100%;width:100%;border-radius:var(--radius)}.photo-caption{position:absolute;left:25px;bottom:25px;right:25px;font-size:12px;color:white;text-shadow:0 2px 9px #000;display:flex;justify-content:space-between;align-items:center}.photo-caption .icon{width:30px;height:30px}.amenities h2{margin-bottom:20px}.amenities-desc{font-size:13px;color:#bdcecd;margin-bottom:30px}.amenities-list{display:grid;grid-template-columns:1fr 1fr;gap:0 28px}.amenity{padding:21px 0;border-top:1px solid #ffffff26;display:flex;align-items:start;gap:13px}.amenity>.icon{color:var(--aqua);width:25px;height:25px}.amenity h3{font-size:12px;letter-spacing:0;margin-bottom:6px}.amenity p{font-size:11px;color:#bdcecd}.amenities .text-link{margin-top:25px;color:var(--accent)}
+    .gallery-grid{display:grid;grid-template-columns:1.35fr 1fr 1fr;grid-template-rows:220px 220px;gap:16px}.gallery-item{position:relative;border:0;padding:0;overflow:hidden;border-radius:var(--radius);background:var(--sand)}.gallery-item:first-child{grid-row:span 2}.gallery-item img{height:100%;width:100%;transition:transform .7s var(--ease),filter .4s}.gallery-item:hover img{transform:scale(1.04);filter:brightness(.82)}.gallery-item:after{content:'↗';position:absolute;right:15px;bottom:15px;width:32px;height:32px;display:grid;place-items:center;border-radius:50%;background:#fff;color:var(--ink);font-size:20px;opacity:0;transition:opacity .2s}.gallery-item:hover:after,.gallery-item:focus-visible:after{opacity:1}.gallery-label{font-size:11px;color:var(--muted);display:flex;gap:10px;align-items:center;margin-top:17px}.gallery-label .icon{width:16px;height:16px}.reviews{background:var(--sand)}.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:35px}.review{border-top:1px solid #bdc4b9;padding-top:24px;display:flex;flex-direction:column}.stars{color:#326a5e;font-size:18px;letter-spacing:4px;line-height:1;margin-bottom:22px}.review blockquote{margin:0 0 26px;font-size:13px;line-height:1.9;flex:1}.review-author{display:flex;align-items:center;gap:12px}.avatar{height:38px;width:38px;border-radius:50%;background:#d7ddcc;display:grid;place-items:center;font-size:11px;font-weight:600}.review-author strong{display:block;font-size:11px}.review-author small{font-size:11px;color:var(--muted)}
+    .contact-layout{display:grid;grid-template-columns:.9fr 1.1fr;gap:90px}.contact-copy h2{margin-bottom:24px}.contact-copy>p{font-size:13px;color:var(--muted);max-width:360px}.contact-details{display:grid;gap:23px;margin-block:32px}.contact-detail{display:flex;gap:14px;align-items:start}.contact-detail>.icon{color:#3c7c71;width:21px;height:21px}.contact-detail strong{font-weight:600;font-size:13px}.contact-detail small{display:block;font-size:11px;color:var(--muted);margin-top:4px}.socials{display:flex;gap:10px}.socials a{border:1px solid #bac9c5;border-radius:6px;font-size:11px;padding:7px 14px;font-weight:600;transition:background .2s}.socials a:hover{background:var(--sand)}.request-form{padding:34px;background:white;border-radius:var(--radius);box-shadow:0 12px 35px #0b252b07}.request-form h3{font-size:23px;margin-bottom:8px}.form-intro{font-size:11px;color:var(--muted);margin-bottom:25px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:17px}.field{display:flex;flex-direction:column;gap:6px;min-width:0}.field.full{grid-column:1/-1}.field label{font-size:11px;font-weight:600}.field input,.field select,.field textarea{width:100%;padding:12px 13px;min-height:46px;color:var(--ink);background:var(--paper);border:1px solid #dce2dc;border-radius:6px;font-size:12px}.field textarea{resize:vertical;min-height:80px}.field input:focus,.field select:focus,.field textarea:focus{border-color:#498b80}.consent{font-size:11px;color:var(--muted);display:flex;align-items:start;gap:9px;margin:19px 0}.consent input{accent-color:var(--ink);margin:3px 0 0;flex-shrink:0}.request-form>.btn{width:100%;justify-content:space-between}.form-status{font-size:12px;margin-top:15px;color:#285c50}.form-status:empty{display:none}.map{height:300px;position:relative;background:#e7ede7;border-top:1px solid var(--line)}.map iframe{height:100%;width:100%;border:0;display:block;filter:saturate(.5)}.map-badge{position:absolute;bottom:22px;left:max(24px,calc((100% - 1320px)/2));background:var(--paper);padding:12px 18px;box-shadow:0 4px 20px #14373215;border-radius:8px;font-size:11px;max-width:calc(100% - 48px)}.footer{background:var(--deep);color:white;padding-block:35px}.footer-top{display:flex;justify-content:space-between;gap:30px;align-items:center}.footer-message{font-size:24px}.footer-bottom{border-top:1px solid #ffffff20;margin-top:30px;padding-top:20px;display:flex;justify-content:space-between;gap:22px;font-size:11px;color:#bfd0ce}.footer-bottom p{max-width:650px}.lightbox{border:0;padding:0;background:var(--deep);color:white;max-width:min(1100px,94vw);max-height:92svh;border-radius:var(--radius);overflow:visible}.lightbox::backdrop{background:#03181eea}.lightbox img{max-height:78svh;width:auto;max-width:100%;object-fit:contain;border-radius:14px 14px 0 0;margin:auto}.lightbox p{padding:15px 22px;font-size:12px}.close-dialog{position:absolute;top:12px;right:12px;background:var(--paper);border:0;color:var(--ink);width:40px;height:40px;border-radius:50%;display:grid;place-items:center}.lightbox[open]{animation:arrive .35s var(--ease)}@keyframes arrive{from{opacity:.4;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+    @media(min-width:1500px){.hero-content{padding-top:180px}.hero-title{font-size:265px}.hero-lower{margin-top:45px}.booking-bar{margin-top:45px}}
+    @media(max-width:1100px){.wrap{width:calc(100% - 56px)}.nav{gap:17px}.nav a{font-size:11px}.header-inner{gap:16px}.header-cta{padding-inline:15px}.amenities-layout{gap:40px}.contact-layout{gap:40px}.room-body{padding:20px}.room h3{font-size:18px}.room-photo{height:210px}.room-bottom{align-items:start;flex-direction:column}.room-button{width:100%;justify-content:space-between}.booking-field{padding-inline:15px}.hero{min-height:810px}.hero-title{font-size:21vw}.hero-content{padding-top:145px}.hero-stamp{max-width:170px}.amenity-photo{height:580px}.gallery-grid{grid-template-rows:185px 185px}}
+    @media(max-width:760px){html{scroll-padding-top:82px}.wrap{width:calc(100% - 40px)}.section{padding-block:65px}.site-header{height:78px}.site-header.scrolled{height:70px}.brand-wave{width:33px;height:33px}.brand-name{font-size:24px}.brand-small{font-size:11px}.header-cta{margin-left:auto;font-size:11px;min-height:40px;padding:10px 12px}.header-cta .icon{display:none}.menu-toggle{display:flex}.menu-toggle .icon{height:20px;width:20px}.nav{display:none;position:absolute;left:0;right:0;top:100%;padding:23px 25px 28px;background:var(--deep);border-top:1px solid #ffffff25;box-shadow:0 14px 20px #05222a25}.nav.open{display:flex;flex-direction:column;align-items:stretch;gap:0}.nav a{font-size:14px;padding:12px}.hero{min-height:890px;min-height:max(840px,100svh)}.hero-image{object-position:61% center}.hero:before{background:linear-gradient(0deg,#071f29 0%,#071f2950 100%),linear-gradient(90deg,#071f2955,transparent)}.hero-content{padding-top:140px;padding-bottom:25px}.hero-topline{font-size:11px;letter-spacing:.12em;margin-bottom:27px}.hero-title{font-size:29vw}.hero-title span{font-size:25px;margin-top:24px;max-width:270px}.hero-lower{margin-top:25px}.hero-copy{font-size:11px;max-width:285px}.hero-stamp{display:none}.booking-bar{grid-template-columns:1fr 1fr;padding:9px;margin-top:30px;gap:6px}.booking-field{padding:9px 10px;min-height:68px;border:0}.booking-field:first-child{border-right:1px solid var(--line)}.booking-field label{font-size:11px}.booking-field input,.booking-field select{font-size:11px;min-width:0}.booking-bar>.btn{margin:4px 0;font-size:11px;padding:12px 9px;gap:8px}.booking-bar>.btn .icon{width:16px}.hero-perks{gap:12px;justify-content:space-between;padding-top:22px}.hero-perks span{font-size:11px;gap:5px}.hero-perks .icon{width:16px;height:16px}.hero-bottom{font-size:11px;letter-spacing:.06em}.intro{grid-template-columns:1fr;gap:22px;padding-block:42px}.intro h2{max-width:340px}.intro p{font-size:12px}.section-head{display:block;margin-bottom:28px}.section-head p{margin-top:20px;font-size:12px;max-width:380px}.rooms-grid{grid-template-columns:1fr;gap:26px}.room-photo{height:260px}.room h3{font-size:22px}.room-body{padding:24px}.room-bottom{flex-direction:row;align-items:center}.room-button{width:auto}.amenities-layout{grid-template-columns:1fr;gap:32px}.amenity-photo{height:350px;order:2}.amenities-desc{font-size:12px}.amenities-list{gap:0 18px}.amenity{gap:10px}.amenity h3{font-size:11px}.amenity p{font-size:11px}.amenity>.icon{width:22px}.gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:280px 160px 160px;gap:12px}.gallery-item:first-child{grid-row:auto;grid-column:span 2}.gallery-item:after{opacity:1;width:27px;height:27px;font-size:16px}.reviews-grid{grid-template-columns:1fr;gap:30px}.review blockquote{margin-bottom:19px}.contact-layout{grid-template-columns:1fr;gap:34px}.request-form{padding:25px 20px}.form-grid{gap:15px 12px}.field input,.field select{font-size:11px;padding:11px 8px}.footer-top{align-items:start}.footer-message{font-size:18px;max-width:160px;text-align:right}.footer-bottom{flex-direction:column;gap:12px}.map{height:260px}}
+    /* Booking typography and a more spacious request form. */
+    .booking-field label{font-size:12px;text-transform:none;letter-spacing:0;font-weight:500;margin-bottom:7px}
+    .booking-field input,.booking-field select{font-family:'Inter',sans-serif;font-size:16px;font-weight:500;line-height:1.5;letter-spacing:0;font-variant-numeric:tabular-nums;min-height:36px}
+    input[type="date"]::-webkit-datetime-edit{font-family:'Inter',sans-serif;font-size:inherit;font-weight:500;padding:0}
+    input[type="date"]::-webkit-datetime-edit-fields-wrapper{padding:0}
+    input[type="date"]::-webkit-calendar-picker-indicator{width:18px;height:18px;margin-left:6px;opacity:.65;cursor:pointer}
+    .contact-layout{grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);gap:64px;align-items:start}
+    .request-form{padding:44px}
+    .request-form h3{font-size:32px;margin-bottom:12px}
+    .form-intro{font-size:14px;line-height:1.65;margin-bottom:30px}
+    .form-grid{gap:24px 20px}
+    .field{gap:9px}
+    .field label{font-size:14px;font-weight:500}
+    .field input,.field select,.field textarea{font-family:'Inter',sans-serif;font-size:16px;line-height:1.5;min-height:58px;padding:16px;border-radius:8px}
+    .field input::placeholder,.field textarea::placeholder{color:var(--muted);opacity:1}
+    .field textarea{min-height:120px}
+    .consent{font-size:13px;line-height:1.6;gap:12px;margin:26px 0}
+    .consent input{width:18px;height:18px;margin-top:2px}
+    .request-form>.btn{min-height:60px;font-size:15px;padding:18px 24px;border-radius:8px}
+    .form-status{font-size:14px;line-height:1.65;margin-top:20px}
+    @media(max-width:1100px){
+      .contact-layout{grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:32px}
+      .request-form{padding:32px}
+    }
+    @media(max-width:900px){
+      .contact-layout{grid-template-columns:1fr;gap:36px}
+      .contact-copy>p{max-width:540px}
+      .request-form{width:100%;max-width:760px}
+    }
+    @media(max-width:760px){
+      .booking-field input,.booking-field select{font-size:15px}
+      .booking-field label{font-size:12px}
+      .booking-field{padding-inline:8px}
+      .request-form{padding:28px 22px}
+      .request-form h3{font-size:27px}
+      .form-grid{gap:20px 16px}
+    }
+    @media(max-width:540px){
+      .form-grid{grid-template-columns:1fr}
+      .request-form{padding:28px 20px}
+      .request-form>.btn{padding-inline:18px}
+    }
+    @media(max-width:380px){
+      .booking-bar{grid-template-columns:1fr}
+      .booking-field:first-child{border-right:0}
+      .booking-field{border-bottom:1px solid var(--line);padding:10px 12px}
+      .booking-bar>.btn{min-height:50px;font-size:12px}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
+  </style>
+</head>
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+    <defs>
+      <symbol id="i-wave" viewBox="0 0 48 48"><path d="M4 19c7 0 7-8 14-8s7 8 14 8 7-8 12-8M4 29c7 0 7-8 14-8s7 8 14 8 7-8 12-8M4 39c7 0 7-8 14-8s7 8 14 8 7-8 12-8"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+      <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></symbol>
+      <symbol id="i-spa" viewBox="0 0 24 24"><path d="M12 20C3 20 2 10 2 10s6-1 10 6c4-7 10-6 10-6s-1 10-10 10ZM12 16c-6-5 0-13 0-13s6 8 0 13Z"/></symbol>
+      <symbol id="i-food" viewBox="0 0 24 24"><path d="M5 3v6m3-6v6M2 3v6c0 4 6 4 6 0M5 12v9M20 21V3s-6 1-6 10h6"/></symbol>
+      <symbol id="i-pool" viewBox="0 0 24 24"><path d="M6 15V5a2 2 0 0 1 4 0m4 10V5a2 2 0 0 1 4 0M6 8h8M6 12h8M2 17c2-2 3 2 5 0s3 2 5 0 3 2 5 0 3 2 5 0M2 21c2-2 3 2 5 0s3 2 5 0 3 2 5 0 3 2 5 0"/></symbol>
+      <symbol id="i-park" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M9 17V7h4a3 3 0 0 1 0 6H9"/></symbol>
+      <symbol id="i-bed" viewBox="0 0 24 24"><path d="M3 18V8m18 10V8M3 15h18M3 11h18v4H3zm3 0V6h12v5M12 6v5"/></symbol>
+      <symbol id="i-area" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 16 16 8m-5 0h5v5M8 11v5h5"/></symbol>
+      <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></symbol>
+      <symbol id="i-wifi" viewBox="0 0 24 24"><path d="M2 8a16 16 0 0 1 20 0M5 12a11 11 0 0 1 14 0m-11 4a6 6 0 0 1 8 0"/><circle cx="12" cy="20" r=".6"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path d="m7 3 3 5-3 3c2 3 3 4 6 6l3-3 5 3c0 3-1 5-4 4C9 19 5 15 3 7 2 4 4 3 7 3Z"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+    </defs>
+  </svg>
+
+  <header class="site-header" id="header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#home" aria-label="Отель Бриз — на главную"><svg class="icon brand-wave"><use href="#i-wave"/></svg><span class="brand-name">БРИЗ<span class="brand-small">ОТЕЛЬ У МОРЯ</span></span></a>
+      <nav class="nav" id="navigation" aria-label="Главная навигация"><a href="#rooms">Номера</a><a href="#amenities">Удобства</a><a href="#gallery">Галерея</a><a href="#reviews">Отзывы</a><a href="#contacts">Контакты</a></nav>
+      <a class="btn header-cta" href="#booking">Забронировать <svg class="icon"><use href="#i-arrow"/></svg></a>
+      <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-controls="navigation" aria-expanded="false"><svg class="icon"><use href="#i-menu"/></svg></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <img class="hero-image" src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&amp;fit=crop&amp;w=2400&amp;q=85" alt="Бирюзовое море и тихая бухта с песчаным пляжем" fetchpriority="high">
+      <div class="wrap hero-content">
+        <h1 class="hero-title" id="hero-title">БРИЗ<span>Ближе к морю.<br>Ближе к себе.</span></h1>
+        <div class="hero-lower"><p class="hero-copy">Просыпаться под шум волн. Никуда не спешить.<br>Почувствовать, как выглядит настоящий отдых.</p><div class="hero-stamp"><svg class="icon"><use href="#i-sun"/></svg><span>Ваш маленький побег<br>в большое спокойствие</span></div></div>
+        <form class="booking-bar" id="quick-booking">
+          <div class="booking-field"><label for="quick-in">Дата заезда</label><input id="quick-in" name="arrival" type="date" required></div>
+          <div class="booking-field"><label for="quick-out">Дата выезда</label><input id="quick-out" name="departure" type="date" required></div>
+          <div class="booking-field"><label for="quick-guests">Гости</label><select id="quick-guests" name="guests"><option value="1">1 гость</option><option value="2" selected>2 гостя</option><option value="3">3 гостя</option><option value="4">4 гостя</option></select></div>
+          <button class="btn btn-dark" type="submit">Подобрать номер <svg class="icon"><use href="#i-arrow"/></svg></button>
+        </form>
+        <div class="hero-perks"><span><svg class="icon"><use href="#i-wave"/></svg>50 метров до моря</span><span><svg class="icon"><use href="#i-spa"/></svg>SPA и релакс</span><span><svg class="icon"><use href="#i-food"/></svg>Ресторан у моря</span></div>
+      </div>
+      <div class="wrap hero-bottom"><span>Отпуск начинается с выдоха</span><a href="#rooms">Открыть Бриз <svg class="icon" style="transform:rotate(90deg)"><use href="#i-arrow"/></svg></a></div>
+    </section>
+
+    <div class="wrap intro"><h2>Здесь можно<br>просто <span class="serif">быть.</span></h2><p>Оставьте городскую суету за горизонтом. В «Бризе» всё рядом: тёплое море, любимый завтрак на террасе и номер, в который приятно возвращаться. А мы позаботимся о деталях.</p></div>
+
+    <section class="section wrap" id="rooms" aria-labelledby="rooms-title">
+      <div class="section-head"><h2 id="rooms-title">Ваше место<br>под <span class="serif">солнцем.</span></h2><p id="room-summary" aria-live="polite">Для неспешных выходных, семейных каникул и тех самых «ещё пару дней».</p></div>
+      <div class="rooms-grid">
+        <article class="room"><div class="room-photo"><img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&amp;fit=crop&amp;w=800&amp;q=85" alt="Светлый стандартный номер с большой двуспальной кроватью" loading="lazy"><span class="room-tag">Всё для уютного отдыха</span></div><div class="room-body"><h3>Стандарт</h3><ul class="room-features"><li><svg class="icon"><use href="#i-area"/></svg>24 м²</li><li><svg class="icon"><use href="#i-user"/></svg>До 2 гостей</li><li><svg class="icon"><use href="#i-wifi"/></svg>Wi-Fi</li><li>Кондиционер</li></ul><div class="room-bottom"><p class="price">от 5 500 ₽<small>за номер / сутки</small></p><button class="btn btn-dark room-button" type="button" data-room="standard">Выбрать <svg class="icon"><use href="#i-arrow"/></svg></button></div></div></article>
+        <article class="room"><div class="room-photo"><img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&amp;fit=crop&amp;w=800&amp;q=85" alt="Просторный номер делюкс в тёплых светлых оттенках" loading="lazy"><span class="room-tag">С видом на море</span></div><div class="room-body"><h3>Делюкс с видом на море</h3><ul class="room-features"><li><svg class="icon"><use href="#i-area"/></svg>36 м²</li><li><svg class="icon"><use href="#i-user"/></svg>До 3 гостей</li><li>Балкон</li><li>Кофемашина</li></ul><div class="room-bottom"><p class="price">от 8 500 ₽<small>за номер / сутки</small></p><button class="btn btn-dark room-button" type="button" data-room="deluxe">Выбрать <svg class="icon"><use href="#i-arrow"/></svg></button></div></div></article>
+        <article class="room"><div class="room-photo"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&amp;fit=crop&amp;w=800&amp;q=85" alt="Интерьер люкса с отдельной зоной отдыха и мягкой мебелью" loading="lazy"><span class="room-tag">Больше пространства для вас</span></div><div class="room-body"><h3>Люкс</h3><ul class="room-features"><li><svg class="icon"><use href="#i-area"/></svg>58 м²</li><li><svg class="icon"><use href="#i-user"/></svg>До 4 гостей</li><li>Гостиная</li><li>Терраса</li></ul><div class="room-bottom"><p class="price">от 13 000 ₽<small>за номер / сутки</small></p><button class="btn btn-dark room-button" type="button" data-room="suite">Выбрать <svg class="icon"><use href="#i-arrow"/></svg></button></div></div></article>
+      </div>
+      <p class="demo-note">Пример категорий и цен. Фотографии иллюстративные; стоимость и наличие номеров требуют подтверждения.</p>
+    </section>
+
+    <section class="section amenities" id="amenities" aria-labelledby="amenities-title"><div class="wrap amenities-layout">
+      <div class="amenity-photo"><img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&amp;fit=crop&amp;w=1000&amp;q=85" alt="Открытый бассейн с шезлонгами и пальмами" loading="lazy"><div class="photo-caption"><span>Планы на сегодня?<br>Ничего не планировать.</span><svg class="icon"><use href="#i-sun"/></svg></div></div>
+      <div><h2 id="amenities-title">Всё для вашего<br><span class="serif">«как хорошо».</span></h2><p class="amenities-desc">От первого глотка кофе до последнего луча солнца — отдых, в котором всё на своём месте.</p><div class="amenities-list">
+        <div class="amenity"><svg class="icon"><use href="#i-pool"/></svg><div><h3>Тёплый бассейн</h3><p>Плавать с утра до заката</p></div></div>
+        <div class="amenity"><svg class="icon"><use href="#i-wave"/></svg><div><h3>Собственный пляж</h3><p>Ваш шезлонг уже ждёт</p></div></div>
+        <div class="amenity"><svg class="icon"><use href="#i-food"/></svg><div><h3>Ресторан</h3><p>Свежие вкусы побережья</p></div></div>
+        <div class="amenity"><svg class="icon"><use href="#i-spa"/></svg><div><h3>SPA-пространство</h3><p>Время заботы о себе</p></div></div>
+        <div class="amenity"><svg class="icon"><use href="#i-park"/></svg><div><h3>Парковка</h3><p>Комфорт с первой минуты</p></div></div>
+        <div class="amenity"><svg class="icon"><use href="#i-wifi"/></svg><div><h3>Wi-Fi на территории</h3><p>На связи, когда захотите</p></div></div>
+      </div><a class="text-link" href="#booking">Хочу к вам <svg class="icon"><use href="#i-arrow"/></svg></a></div>
+    </div></section>
+
+    <section class="section wrap" id="gallery" aria-labelledby="gallery-title"><div class="section-head"><h2 id="gallery-title">Почувствуйте<br>этот <span class="serif">момент.</span></h2><p>Солнечные блики на воде, тень пальм и маленькие детали большого отпуска.</p></div>
+      <div class="gallery-grid">
+        <button class="gallery-item" type="button" aria-label="Увеличить фото пляжа"><img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Тихая бухта и бирюзовое море" loading="lazy"></button>
+        <button class="gallery-item" type="button" aria-label="Увеличить фото бассейна"><img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&amp;fit=crop&amp;w=700&amp;q=85" alt="Бассейн в окружении тропической зелени" loading="lazy"></button>
+        <button class="gallery-item" type="button" aria-label="Увеличить фото ресторана"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&amp;fit=crop&amp;w=700&amp;q=85" alt="Уютный ресторан с сервированными столиками" loading="lazy"></button>
+        <button class="gallery-item" type="button" aria-label="Увеличить фото номера"><img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&amp;fit=crop&amp;w=700&amp;q=85" alt="Мягкий свет в интерьере номера" loading="lazy"></button>
+        <button class="gallery-item" type="button" aria-label="Увеличить фото территории"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&amp;fit=crop&amp;w=700&amp;q=85" alt="Курортный отель и солнечная территория у бассейна" loading="lazy"></button>
+      </div><p class="gallery-label"><svg class="icon"><use href="#i-sun"/></svg>Нажмите на фотографию, чтобы рассмотреть детали. Фото: Unsplash.</p>
+    </section>
+
+    <section class="section reviews" id="reviews" aria-labelledby="reviews-title"><div class="wrap"><div class="section-head"><h2 id="reviews-title">Тёплые слова.<br>Тёплые <span class="serif">воспоминания.</span></h2><p>Примеры оформления отзывов. Здесь будут опубликованы подтверждённые впечатления гостей.</p></div><div class="reviews-grid">
+      <article class="review"><div class="stars" aria-label="5 из 5 звёзд">★★★★★</div><blockquote>«То самое место, где наконец удалось выспаться. Утром — море, потом завтрак и целый день без спешки. Очень хочется повторить».</blockquote><div class="review-author"><span class="avatar" aria-hidden="true">АК</span><div><strong>Анна К.</strong><small>Пример отзыва · отдых вдвоём</small></div></div></article>
+      <article class="review"><div class="stars" aria-label="5 из 5 звёзд">★★★★★</div><blockquote>«Дети в восторге от бассейна, мы — от тишины и вида с балкона. Удобно, когда пляж так близко и не нужно никуда ехать».</blockquote><div class="review-author"><span class="avatar" aria-hidden="true">МД</span><div><strong>Михаил Д.</strong><small>Пример отзыва · семейный отпуск</small></div></div></article>
+      <article class="review"><div class="stars" aria-label="5 из 5 звёзд">★★★★★</div><blockquote>«Приехали на выходные, а хотелось остаться ещё на неделю. Красивый номер, вкусный ужин и закат у воды. Наш идеальный мини-отпуск».</blockquote><div class="review-author"><span class="avatar" aria-hidden="true">ЕС</span><div><strong>Елена С.</strong><small>Пример отзыва · выходные у моря</small></div></div></article>
+    </div></div></section>
+
+    <section class="section wrap" id="contacts" aria-labelledby="contacts-title"><div class="contact-layout">
+      <div class="contact-copy"><h2 id="contacts-title">До моря —<br>один <span class="serif">шаг.</span></h2><p>Расскажите, когда хотите приехать, и выберите свой номер. Всё остальное начинается с простого «ждём вас».</p><div class="contact-details">
+        <div class="contact-detail"><svg class="icon"><use href="#i-pin"/></svg><div><strong>Черноморское побережье</strong><small>Демонстрационный адрес: ул. Морская, 12</small></div></div>
+        <div class="contact-detail"><svg class="icon"><use href="#i-phone"/></svg><div><strong>+7 (000) 000-00-00</strong><small>Пример телефона — замените номером отеля</small></div></div>
+        <div class="contact-detail"><svg class="icon"><use href="#i-mail"/></svg><div><a href="mailto:hello@briz.example"><strong>hello@briz.example</strong></a><small>Демонстрационная электронная почта</small></div></div>
+      </div><div class="socials" aria-label="Социальные сети"><a href="https://t.me/" target="_blank" rel="noopener noreferrer" aria-label="Открыть Telegram — профиль отеля пока не указан">Telegram ↗</a><a href="https://vk.com/" target="_blank" rel="noopener noreferrer" aria-label="Открыть ВКонтакте — профиль отеля пока не указан">ВКонтакте ↗</a></div><p class="demo-note">Контакты и ссылки на социальные сети нужно заменить реальными данными отеля.</p></div>
+      <form class="request-form" id="booking"><h3>Начнём ваш отпуск?</h3><p class="form-intro">Демонстрационная форма: данные никуда не отправляются.</p><div class="form-grid">
+        <div class="field"><label for="guest-name">Ваше имя</label><input id="guest-name" name="name" placeholder="Как к вам обращаться" autocomplete="given-name" minlength="2" maxlength="80" required></div>
+        <div class="field"><label for="guest-phone">Телефон</label><input id="guest-phone" name="phone" type="tel" placeholder="+7 (999) 123-45-67" autocomplete="tel" maxlength="30" required></div>
+        <div class="field"><label for="arrival">Дата заезда</label><input id="arrival" name="arrival" type="date" required></div>
+        <div class="field"><label for="departure">Дата выезда</label><input id="departure" name="departure" type="date" required></div>
+        <div class="field"><label for="room-type">Категория номера</label><select id="room-type" name="room"><option value="any">Помогите выбрать</option><option value="standard">Стандарт</option><option value="deluxe">Делюкс с видом на море</option><option value="suite">Люкс</option></select></div>
+        <div class="field"><label for="guest-count">Количество гостей</label><select id="guest-count" name="guests"><option value="1">1 гость</option><option value="2" selected>2 гостя</option><option value="3">3 гостя</option><option value="4">4 гостя</option></select></div>
+        <div class="field full"><label for="wishes">Пожелания <span style="font-weight:400">· необязательно</span></label><textarea id="wishes" name="wishes" placeholder="Например, едем с ребёнком или хотим номер повыше" maxlength="1000"></textarea></div>
+      </div><label class="consent"><input type="checkbox" name="consent" required><span>Я понимаю, что это демонстрационная форма и заявка не будет отправлена. Для настоящего бронирования нужны подтверждённые контакты отеля.</span></label><button class="btn btn-dark" type="submit">Проверить заявку <svg class="icon"><use href="#i-arrow"/></svg></button><p class="form-status" id="form-status" role="status" aria-live="polite"></p></form>
+    </div></section>
+
+    <div class="map" aria-label="Обзорная карта Черноморского побережья"><iframe title="Обзорная карта побережья — точное расположение отеля не указано" src="https://www.openstreetmap.org/export/embed.html?bbox=39.65%2C43.52%2C39.85%2C43.66&amp;layer=mapnik" loading="lazy" referrerpolicy="no-referrer"></iframe><div class="map-badge">Черноморское побережье · точное расположение отеля уточняется</div></div>
+  </main>
+
+  <footer class="footer"><div class="wrap"><div class="footer-top"><a class="brand" href="#home" aria-label="Отель Бриз — наверх"><svg class="icon brand-wave"><use href="#i-wave"/></svg><span class="brand-name">БРИЗ<span class="brand-small">ОТЕЛЬ У МОРЯ</span></span></a><p class="footer-message serif">Увидимся у моря.</p></div><div class="footer-bottom"><p>© <span id="year">2026</span> Бриз. Демонстрационный лендинг. Характеристики, цены и отзывы приведены для примера. Фотографии: Unsplash.</p><a href="#home">Вернуться наверх ↑</a></div></div></footer>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Просмотр фотографии"><button class="close-dialog" type="button" aria-label="Закрыть фотографию"><svg class="icon"><use href="#i-close"/></svg></button><img id="lightbox-image" src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&amp;fit=crop&amp;w=1600&amp;q=85" alt=""><p id="lightbox-caption"></p></dialog>
+  <script>
+    'use strict';
+    const $ = (selector) => document.querySelector(selector);
+    const header = $('#header');
+    const menu = $('.menu-toggle');
+    const navigation = $('#navigation');
+    const updateHeader = () => header.classList.toggle('scrolled', window.scrollY > 24);
+    window.addEventListener('scroll', updateHeader, { passive: true });
+    updateHeader();
+    function closeMenu() { navigation.classList.remove('open'); menu.setAttribute('aria-expanded', 'false'); menu.setAttribute('aria-label', 'Открыть меню'); }
+    menu.addEventListener('click', () => {
+      const open = navigation.classList.toggle('open');
+      menu.setAttribute('aria-expanded', String(open));
+      menu.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
+    });
+    navigation.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+    document.addEventListener('keydown', event => { if (event.key === 'Escape') closeMenu(); });
+    document.addEventListener('click', event => { if (!header.contains(event.target)) closeMenu(); });
+    window.matchMedia('(min-width: 761px)').addEventListener('change', event => { if (event.matches) closeMenu(); });
+
+    // Local calendar dates avoid shifting the selected day with the UTC offset.
+    const dateString = date => `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
+    function nextDay(value) { const [y,m,d] = value.split('-').map(Number); return dateString(new Date(y,m-1,d+1)); }
+    const today = dateString(new Date());
+    const tomorrow = nextDay(today);
+    const datePairs = [[$('#quick-in'), $('#quick-out')], [$('#arrival'), $('#departure')]];
+    datePairs.forEach(([arrival, departure]) => {
+      arrival.min = today; arrival.value = today; departure.min = tomorrow; departure.value = tomorrow;
+      arrival.addEventListener('input', () => {
+        arrival.setCustomValidity(''); departure.setCustomValidity('');
+        if (!arrival.value) return;
+        departure.min = nextDay(arrival.value);
+        if (!departure.value || departure.value <= arrival.value) departure.value = departure.min;
+      });
+      departure.addEventListener('input', () => departure.setCustomValidity(''));
+    });
+    function validateDates(arrival, departure) {
+      arrival.setCustomValidity(arrival.value && arrival.value < today ? 'Выберите сегодняшнюю или будущую дату.' : '');
+      departure.setCustomValidity(departure.value && departure.value <= arrival.value ? 'Дата выезда должна быть позже даты заезда.' : '');
+      return arrival.reportValidity() && departure.reportValidity();
+    }
+    function copyQuickDates() { $('#arrival').value = $('#quick-in').value; $('#departure').value = $('#quick-out').value; $('#departure').min = nextDay($('#quick-in').value); $('#guest-count').value = $('#quick-guests').value; }
+    const capacity = { any: 4, standard: 2, deluxe: 3, suite: 4 };
+    const roomNames = { standard: 'Стандарт', deluxe: 'Делюкс с видом на море', suite: 'Люкс' };
+    function updateCapacity() {
+      const limit = capacity[$('#room-type').value];
+      Array.from($('#guest-count').options).forEach(option => { option.disabled = Number(option.value) > limit; });
+      if (Number($('#guest-count').value) > limit) $('#guest-count').value = String(limit);
+      $('#form-status').textContent = '';
+    }
+    $('#quick-booking').addEventListener('submit', event => {
+      event.preventDefault();
+      if (!validateDates($('#quick-in'), $('#quick-out'))) return;
+      copyQuickDates();
+      const guests = Number($('#quick-guests').value);
+      document.querySelectorAll('[data-room]').forEach(button => {
+        const fits = capacity[button.dataset.room] >= guests;
+        button.disabled = !fits;
+        button.textContent = fits ? 'Выбрать →' : 'До ' + capacity[button.dataset.room] + ' гостей';
+        button.style.opacity = fits ? '' : '.5';
+        button.style.cursor = fits ? '' : 'not-allowed';
+      });
+      $('#room-summary').textContent = `Показаны категории для вашего отдыха. Номера с недостаточной вместимостью недоступны для выбора. Наличие и стоимость уточняются при подтверждении.`;
+      $('#room-type').value = 'any'; updateCapacity();
+      $('#rooms').scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
+    });
+    document.querySelectorAll('[data-room]').forEach(button => button.addEventListener('click', () => {
+      if (!validateDates($('#quick-in'), $('#quick-out'))) return;
+      copyQuickDates();
+      $('#room-type').value = button.dataset.room;
+      updateCapacity();
+      $('#booking').scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
+      $('#room-type').focus({ preventScroll: true });
+    }));
+    $('#room-type').addEventListener('change', updateCapacity);
+    $('#guest-phone').addEventListener('input', () => $('#guest-phone').setCustomValidity(''));
+    $('#guest-name').addEventListener('input', () => $('#guest-name').setCustomValidity(''));
+    $('#booking').addEventListener('input', () => { $('#form-status').textContent = ''; });
+    $('#booking').addEventListener('submit', event => {
+      event.preventDefault();
+      if (!validateDates($('#arrival'), $('#departure'))) return;
+      const phone = $('#guest-phone');
+      const digits = phone.value.replace(/\D/g, '');
+      phone.setCustomValidity(digits.length >= 10 && digits.length <= 15 ? '' : 'Введите телефон: от 10 до 15 цифр, включая код страны.');
+      const name = $('#guest-name');
+      name.setCustomValidity(name.value.trim().length >= 2 ? '' : 'Укажите имя: минимум 2 символа.');
+      if (!event.target.reportValidity()) return;
+      if (Number($('#guest-count').value) > capacity[$('#room-type').value]) { $('#form-status').textContent = 'Выберите номер большей вместимости.'; return; }
+      const title = roomNames[$('#room-type').value] || 'категория на ваш выбор';
+      $('#form-status').textContent = `${name.value.trim()}, данные заполнены корректно. Номер: ${title}. Это демонстрация: заявка не отправлена, бронирование не создано. Для отправки нужно подключить сервис бронирования.`;
+    });
+
+    const lightbox = $('#lightbox');
+    let lastPhotoButton;
+    document.querySelectorAll('.gallery-item').forEach(button => button.addEventListener('click', () => {
+      lastPhotoButton = button;
+      const photo = button.querySelector('img');
+      const source = new URL(photo.src); source.searchParams.set('w', '1600');
+      $('#lightbox-image').src = source.href; $('#lightbox-image').alt = photo.alt; $('#lightbox-caption').textContent = photo.alt;
+      lightbox.showModal(); document.body.classList.add('locked');
+    }));
+    $('.close-dialog').addEventListener('click', () => lightbox.close());
+    lightbox.addEventListener('click', event => {
+      if (event.target !== lightbox) return;
+      const bounds = lightbox.getBoundingClientRect();
+      if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) lightbox.close();
+    });
+    lightbox.addEventListener('close', () => { document.body.classList.remove('locked'); if (lastPhotoButton) lastPhotoButton.focus({ preventScroll: true }); });
+    $('#year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
